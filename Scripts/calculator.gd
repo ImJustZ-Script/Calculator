@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var cipher_select: OptionButton = $VBoxContainer/CipherSelect
 @onready var input_text: LineEdit = $VBoxContainer/InputText
