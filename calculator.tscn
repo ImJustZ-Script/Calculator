@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bt6q6c7nhcaw5"]
+
+[ext_resource type="Script" uid="uid://djlpfavkedln" path="res://calculator.gd" id="1_kvxsv"]
+
+[node name="Calculator" type="Node2D" unique_id=590847893]
+script = ExtResource("1_kvxsv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=541574085]
+offset_right = 434.0
+offset_bottom = 643.0
+alignment = 1
+
+[node name="CipherSelect" type="OptionButton" parent="VBoxContainer" unique_id=1461750715]
+layout_mode = 2
+alignment = 1
+
+[node name="InputText" type="LineEdit" parent="VBoxContainer" unique_id=936079427]
+layout_mode = 2
+placeholder_text = "Enter message to encrypt/decrypt"
+alignment = 1
+
+[node name="KeyText" type="LineEdit" parent="VBoxContainer" unique_id=39960097]
+layout_mode = 2
+placeholder_text = "Enter secret key"
+alignment = 1
+
+[node name="OutputText" type="LineEdit" parent="VBoxContainer" unique_id=491338307]
+layout_mode = 2
+placeholder_text = "Result will appear here"
+alignment = 1
+
+[node name="ProcessButton" type="Button" parent="VBoxContainer" unique_id=2080253671]
+layout_mode = 2
+text = "Type Encrypt / Decrypt into the box.	"
+autowrap_trim_flags = 0
