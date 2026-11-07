@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bt6q6c7nhcaw5"]
+
+[ext_resource type="Script" uid="uid://djlpfavkedln" path="res://Scripts/calculator.gd" id="1_xst5o"]
+[ext_resource type="FontFile" uid="uid://bncrgiigv685a" path="res://Assets/Fredoka-SemiBold.ttf" id="2_ectdk"]
+
+[node name="Calculator" type="Control" unique_id=769378954]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xst5o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=541574085]
+layout_mode = 1
+offset_left = 358.0
+offset_top = 8.0
+offset_right = 792.0
+offset_bottom = 651.0
+alignment = 1
+
+[node name="CipherSelect" type="OptionButton" parent="VBoxContainer" unique_id=1461750715]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ectdk")
+theme_override_font_sizes/font_size = 20
+alignment = 1
+
+[node name="InputText" type="LineEdit" parent="VBoxContainer" unique_id=936079427]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ectdk")
+theme_override_font_sizes/font_size = 20
+placeholder_text = "Enter message to encrypt/decrypt"
+alignment = 1
+
+[node name="KeyText" type="LineEdit" parent="VBoxContainer" unique_id=39960097]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ectdk")
+theme_override_font_sizes/font_size = 20
+placeholder_text = "Enter secret key"
+alignment = 1
+
+[node name="OutputText" type="LineEdit" parent="VBoxContainer" unique_id=491338307]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ectdk")
+theme_override_font_sizes/font_size = 20
+placeholder_text = "Result will appear here"
+alignment = 1
+
+[node name="ProcessButton" type="Button" parent="VBoxContainer" unique_id=2080253671]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ectdk")
+theme_override_font_sizes/font_size = 20
+text = "Encrypt / Decrypt "
+autowrap_trim_flags = 0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=797109201]
+z_index = -1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 1169.0
+offset_bottom = 649.0
+mouse_filter = 2
+color = Color(0.57346874, 0.7320691, 0.9588674, 1)
