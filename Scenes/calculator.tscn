@@ -4,7 +4,16 @@
 [ext_resource type="FontFile" uid="uid://bncrgiigv685a" path="res://Assets/Fredoka-SemiBold.ttf" id="2_ectdk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqm4q"]
-bg_color = Color(0.17514688, 0.39282748, 0.7438023, 1)
+bg_color = Color(0.23137255, 0.30588236, 0.7058824, 1)
+border_color = Color(0.23137255, 0.30588236, 0.7058824, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gk2me"]
+bg_color = Color(0.23137255, 0.30588236, 0.7058824, 1)
+border_color = Color(0.23137255, 0.30588236, 0.7058824, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -77,6 +86,7 @@ theme_override_fonts/font = ExtResource("2_ectdk")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_dqm4q")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dqm4q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gk2me")
 alignment = 1
 
 [node name="InputText" type="LineEdit" parent="VBoxContainer" unique_id=936079427]
