@@ -3,6 +3,61 @@
 [ext_resource type="Script" uid="uid://djlpfavkedln" path="res://Scripts/calculator.gd" id="1_xst5o"]
 [ext_resource type="FontFile" uid="uid://bncrgiigv685a" path="res://Assets/Fredoka-SemiBold.ttf" id="2_ectdk"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqm4q"]
+bg_color = Color(0.17514688, 0.39282748, 0.7438023, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhymq"]
+bg_color = Color(0.34509805, 0.53333336, 0.827451, 1)
+border_width_top = 8
+border_width_bottom = 8
+border_color = Color(0.34509805, 0.53333336, 0.827451, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ectdk"]
+bg_color = Color(0.34509805, 0.53333336, 0.827451, 1)
+border_width_top = 8
+border_width_bottom = 8
+border_color = Color(0.34509805, 0.53333336, 0.827451, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xst5o"]
+bg_color = Color(0.2628117, 0.44805318, 0.7375137, 1)
+border_width_top = 8
+border_width_bottom = 8
+border_color = Color(0.2627451, 0.44705883, 0.7372549, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2ocy"]
+bg_color = Color(0.34509805, 0.53333336, 0.827451, 1)
+border_width_top = 8
+border_width_bottom = 8
+border_color = Color(0.34509805, 0.53333336, 0.827451, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyoyo"]
+bg_color = Color(0.19932544, 0.42329106, 0.7903186, 1)
+border_color = Color(0.2, 0.42352942, 0.7921569, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="Calculator" type="Control" unique_id=769378954]
 layout_mode = 3
 anchors_preset = 0
@@ -10,43 +65,53 @@ script = ExtResource("1_xst5o")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=541574085]
 layout_mode = 1
-offset_left = 358.0
+offset_left = 252.0
 offset_top = 8.0
-offset_right = 792.0
-offset_bottom = 651.0
+offset_right = 947.0
+offset_bottom = 647.0
 alignment = 1
 
 [node name="CipherSelect" type="OptionButton" parent="VBoxContainer" unique_id=1461750715]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ectdk")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_dqm4q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dqm4q")
 alignment = 1
 
 [node name="InputText" type="LineEdit" parent="VBoxContainer" unique_id=936079427]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ectdk")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhymq")
 placeholder_text = "Enter message to encrypt/decrypt"
 alignment = 1
 
 [node name="KeyText" type="LineEdit" parent="VBoxContainer" unique_id=39960097]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ectdk")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_ectdk")
 placeholder_text = "Enter secret key"
 alignment = 1
 
 [node name="OutputText" type="LineEdit" parent="VBoxContainer" unique_id=491338307]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ectdk")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_xst5o")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_xst5o")
 placeholder_text = "Result will appear here"
 alignment = 1
 
 [node name="ProcessButton" type="Button" parent="VBoxContainer" unique_id=2080253671]
 layout_mode = 2
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("2_ectdk")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_g2ocy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dqm4q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pyoyo")
 text = "Encrypt / Decrypt "
 autowrap_trim_flags = 0
 
